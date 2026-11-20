@@ -1,0 +1,26 @@
+{
+  "name": "reto-qa-frontend",
+  "version": "1.0.0",
+  "description": "Suite de automatización E2E de Sauce Demo con Playwright, Cucumber y TypeScript",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:login": "cucumber-js --tags @login",
+    "test:products": "cucumber-js --tags @products",
+    "test:checkout": "cucumber-js --tags @checkout",
+    "test:positive": "cucumber-js --tags @positive",
+    "test:negative": "cucumber-js --tags @negative",
+    "test:demo": "set HEADLESS=false&& set SLOW_MO=700&& set DEMO_PAUSE=2000&& cucumber-js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["qa", "playwright", "cucumber", "bdd", "typescript"],
+  "author": "Luis Huamani",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.2.1",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
